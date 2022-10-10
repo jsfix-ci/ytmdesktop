@@ -1,6 +1,9 @@
 const { ipcMain, webContents } = require('electron')
 const electronStore = require('electron-store')
-const store = new electronStore({ watch: true })
+const store = new electronStore({
+    watch: true,
+    clearInvalidConfig: true
+})
 
 /**
  * Get setting value

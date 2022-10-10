@@ -1,6 +1,6 @@
 const { remote, ipcRenderer: ipc } = require('electron')
 const electronStore = require('electron-store')
-const store = new electronStore()
+const store = new electronStore({ clearInvalidConfig: true })
 const status = remote.getGlobal('sharedObj')
 const icons = require('../../../assets/icons_for_shiny_tray')
 
